@@ -185,7 +185,7 @@ a:hover {
 .content-block img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0;
   margin: 14px 0;
 }
 
