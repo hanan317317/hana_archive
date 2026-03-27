@@ -10,10 +10,15 @@ Departure time was 22:05.
 
 Narita Airport was very empty. Fewer flights and tourists due to COVID.
 
-<div style="text-align: center;">
+<div style="display: flex; gap: 12px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
   <img
     src="{{ '/assets/entries/singapore/2022-09-25/narita-airport.jpg' | relative_url }}"
-    alt="Narita Airport"
-    style="width: 400px !important; height: auto; display: block; margin: 0 auto;"
+    alt="Narita Airport 1"
+    style="width: 250px; height: auto;"
+  >
+  <img
+    src="{{ '/assets/entries/singapore/2022-09-25/narita-airport.jpg' | relative_url }}"
+    alt="Narita Airport 2"
+    style="width: 250px; height: auto;"
   >
 </div>
