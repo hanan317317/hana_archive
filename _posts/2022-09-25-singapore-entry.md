@@ -14,6 +14,6 @@ Narita Airport was very empty. Fewer flights and tourists due to COVID.
   <img
     src="{{ '/assets/entries/singapore/2022-09-25/narita-airport.jpg' | relative_url }}"
     alt="Narita Airport"
-    style="width: 250px !important; height: auto; display: block; margin: 0 auto;"
+    style="width: 400px !important; height: auto; display: block; margin: 0 auto;"
   >
 </div>
