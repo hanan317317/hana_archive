@@ -24,7 +24,7 @@ Narita Airport was very empty. Fewer flights and tourists due to COVID.
 </div>
 
 <div style="background: #3a3a3a; padding: 24px; border-radius: 18px; color: white; max-width: 420px;">
-  <h2 style="margin-top: 0;">💡 PUBLIC HOLIDAYS IN SINGAPORE</h2>
+  <h2 style="margin-top: 0;"> PUBLIC HOLIDAYS IN SINGAPORE</h2>
   <ul style="margin-bottom: 0; line-height: 1.8;">
     <li>Chinese New Year</li>
     <li>Hari Raya Puasa</li>
@@ -35,4 +35,23 @@ Narita Airport was very empty. Fewer flights and tourists due to COVID.
     <li>Christmas Day</li>
   </ul>
 </div>
+
+
+<div style="background: #3a3a3a; padding: 24px; border-radius: 18px; color: white;">
+  <h2 style="margin-top: 0;"> PUBLIC HOLIDAYS IN SINGAPORE</h2>
+
+  <p style="line-height: 1.8;">
+    Singapore has a diverse set of public holidays that reflect its multicultural society.
+    These holidays are associated with different religious and cultural traditions,
+    including Chinese, Muslim, Christian, Hindu, and Buddhist communities.
+  </p>
+
+  <p style="line-height: 1.8; margin-bottom: 0;">
+    This became important to me because it showed how different belief systems are not only
+    present in Singapore, but also formally recognised in the national calendar. It made me
+    think about how multicultural coexistence is embedded into everyday urban life.
+  </p>
+</div>
+
+
 
