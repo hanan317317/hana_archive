@@ -1,16 +1,16 @@
 ---
 title: Singapore archive entry
 location: singapore
+layout: entry
 ---
 
-This is my Singapore archive entry.
+ZIPAIR ZG53 15:10, delayed due to thunderstorm.
 
-You can write things like:
-- what I did that day
-- what I saw
-- what I recorded
-- links to related scans
-- notes about photos in the Singapore folder
+Departure time was 22:05.
+
+Narita Airport was very empty. Fewer flights and tourists due to COVID.
+
+![Narita Airport]({{ '/assets/entries/singapore/2022-09-25/narita-airport.jpg' | relative_url }})
 
 Example scan link:
 
