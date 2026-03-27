@@ -36,7 +36,7 @@ Narita Airport was very empty. Fewer flights and tourists due to COVID.
   </ul>
 </div>
 
-<div style="background: #3a3a3a; padding: 24px; border-radius: 18px; color: white; margin-top: 24px;">
+<div style="background: #3a3a3a; padding: 24px; border-radius: 18px; color: white; max-width: 420px; margin-top: 24px;">
   <h2 style="margin-top: 0;">PUBLIC HOLIDAYS IN SINGAPORE</h2>
 
   <p style="line-height: 1.8;">
