@@ -1,5 +1,6 @@
 title: Hana Archive
 description: Places I went, archive entries, scans, and photos.
+baseurl: "/hana_archive"
 
 collections:
   locations:
