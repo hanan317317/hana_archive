@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Hana Archive</title>
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="site-title" href="/">Hana Archive</a>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/about/">Profile</a>
+        <a href="/recent/">Recent</a>
+        <a href="/scans/">Scans</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <div class="card hero">
+  <h1>Hana Archive</h1>
+  <p>Interactive map, profile, recent entries, scans, and location-based photo archives.</p>
+</div>
+
+<div class="home-grid">
+  <aside class="card">
+    <h2 class="section-title" style="margin-top: 0;">Locations</h2>
+    <p class="note">Click a marker or use the links below.</p>
+
+    <ul id="location-list" class="location-list">
+      
+        
+        <li>
+          <a href="/locations/bali/">Bali</a>
+          <small>1 entries</small>
+        </li>
+      
+        
+        <li>
+          <a href="/locations/singapore/">Singapore</a>
+          <small>1 entries</small>
+        </li>
+      
+    </ul>
+  </aside>
+
+  <section class="card">
+    <div id="map"></div>
+  </section>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const locations = [
+    
+    {
+      title: "Bali",
+      slug: "bali",
+      url: "/locations/bali/",
+      lat: -8.4095,
+      lng: 115.1889,
+      short_description: "Archive entries from Bali visits."
+    },
+    
+    {
+      title: "Singapore",
+      slug: "singapore",
+      url: "/locations/singapore/",
+      lat: 1.3521,
+      lng: 103.8198,
+      short_description: "Archive entries from Singapore visits."
+    }
+    
+  ];
+
+  const map = L.map("map");
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  const markers = [];
+
+  locations.forEach((location) => {
+    const marker = L.marker([location.lat, location.lng]).addTo(map);
+
+    marker.bindPopup(`
+      <strong>${location.title}</strong><br>
+      ${location.short_description}<br><br>
+      <a href="${location.url}">Open location page</a>
+    `);
+
+    markers.push(marker);
+  });
+
+  if (markers.length > 0) {
+    const group = L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.35));
+  } else {
+    map.setView([0, 110], 3);
+  }
+});
+</script>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Hana Archive — personal archive website.</p>
+    </div>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+</body>
+</html>

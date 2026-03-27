@@ -1,0 +1,75 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<div class="card hero">
+  <h1>Hana Archive</h1>
+  <p>Interactive map, profile, recent entries, scans, and location-based photo archives.</p>
+</div>
+
+<div class="home-grid">
+  <aside class="card">
+    <h2 class="section-title" style="margin-top: 0;">Locations</h2>
+    <p class="note">Click a marker or use the links below.</p>
+
+    <ul id="location-list" class="location-list">
+      {% for location in site.locations %}
+        {% assign posts_for_location = site.posts | where: "location", location.slug %}
+        <li>
+          <a href="{{ location.url | relative_url }}">{{ location.title }}</a>
+          <small>{{ posts_for_location.size }} entries</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <section class="card">
+    <div id="map"></div>
+  </section>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const locations = [
+    {% for location in site.locations %}
+    {
+      title: {{ location.title | jsonify }},
+      slug: {{ location.slug | jsonify }},
+      url: {{ location.url | relative_url | jsonify }},
+      lat: {{ location.lat | jsonify }},
+      lng: {{ location.lng | jsonify }},
+      short_description: {{ location.short_description | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  const map = L.map("map");
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  const markers = [];
+
+  locations.forEach((location) => {
+    const marker = L.marker([location.lat, location.lng]).addTo(map);
+
+    marker.bindPopup(`
+      <strong>${location.title}</strong><br>
+      ${location.short_description}<br><br>
+      <a href="${location.url}">Open location page</a>
+    `);
+
+    markers.push(marker);
+  });
+
+  if (markers.length > 0) {
+    const group = L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.35));
+  } else {
+    map.setView([0, 110], 3);
+  }
+});
+</script>

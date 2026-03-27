@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% assign location_page = site.locations | where: "slug", page.location | first %}
+
+<a class="back-link" href="{% if location_page %}{{ location_page.url | relative_url }}{% else %}{{ '/recent/' | relative_url }}{% endif %}">
+  ← Back
+</a>
+
+<div class="card">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <p class="meta">
+    {{ page.date | date: "%Y-%m-%d" }}
+    {% if location_page %}
+      · <a href="{{ location_page.url | relative_url }}">{{ location_page.title }}</a>
+    {% endif %}
+  </p>
+
+  <div class="content-block">
+    {{ content }}
+  </div>
+</div>

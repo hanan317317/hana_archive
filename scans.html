@@ -1,0 +1,41 @@
+---
+layout: default
+title: Scans
+permalink: /scans/
+---
+
+{% assign scrapbook_files = site.static_files | where_exp: "file", "file.path contains '/assets/scans/scrapbook/'" %}
+{% assign research_files = site.static_files | where_exp: "file", "file.path contains '/assets/scans/research/'" %}
+{% assign notes_files = site.static_files | where_exp: "file", "file.path contains '/assets/scans/notes/'" %}
+
+<div class="card">
+  <h1 class="page-title">Scans</h1>
+  <p class="meta">Put PDFs and image scans into the folders below. They will appear here as links.</p>
+
+  <h2 class="section-title">1. Scrapbook scans</h2>
+  <ul class="file-list">
+    {% for file in scrapbook_files %}
+      <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+    {% else %}
+      <li>No files yet.</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="section-title">2. Research papers</h2>
+  <ul class="file-list">
+    {% for file in research_files %}
+      <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+    {% else %}
+      <li>No files yet.</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="section-title">3. Notes</h2>
+  <ul class="file-list">
+    {% for file in notes_files %}
+      <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+    {% else %}
+      <li>No files yet.</li>
+    {% endfor %}
+  </ul>
+</div>

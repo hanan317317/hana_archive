@@ -1,0 +1,21 @@
+title: Hana Archive
+description: Places I went, archive entries, scans, and photos.
+
+collections:
+  locations:
+    output: true
+    permalink: /locations/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: entry
+  - scope:
+      path: ""
+      type: "locations"
+    values:
+      layout: location
+
+markdown: kramdown
