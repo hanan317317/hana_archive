@@ -8,7 +8,7 @@
   --line: #d9d9d2;
   --text: #1f1f1f;
   --muted: #666;
-  --link: #7da8b7;
+  --link: #437080;
   --max: 1100px;
 }
 
@@ -41,7 +41,7 @@ a:focus {
 }
 
 .site-header {
-  background: var(--card);
+  background: #ADD8E6;
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -59,24 +59,24 @@ a:focus {
 .site-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ADD8E6 !important;
+  color: #437080 !important;
+}
+
+.site-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .site-nav a,
 .site-nav a:visited {
-  color: #ADD8E6 !important;
+  color: #437080 !important;
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-  color: #ADD8E6 !important;
-  text-decoration: underline;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #7da8b7 !important;
+  color: #437080 !important;
   text-decoration: underline;
 }
 
