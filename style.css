@@ -8,7 +8,7 @@
   --line: #d9d9d2;
   --text: #1f1f1f;
   --muted: #666;
-  --link: #1e5eff;
+  --link: red;
   --max: 1100px;
 }
 
@@ -25,7 +25,13 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:visited {
+  color: var(--link);
+}
+
+a:hover,
+a:focus {
+  color: var(--link);
   text-decoration: underline;
 }
 
@@ -60,6 +66,18 @@ a:hover {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.site-nav a,
+.site-nav a:visited {
+  color: red !important;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: red !important;
+  text-decoration: underline;
 }
 
 .site-main {
@@ -178,14 +196,14 @@ a:hover {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0;
   display: block;
 }
 
 .content-block img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0;
   margin: 14px 0;
 }
 
