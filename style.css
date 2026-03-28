@@ -8,7 +8,7 @@
   --line: #d9d9d2;
   --text: #1f1f1f;
   --muted: #666;
-  --link: red;
+  --link: #ADD8E6;
   --max: 1100px;
 }
 
@@ -70,16 +70,15 @@ a:focus {
 
 .site-nav a,
 .site-nav a:visited {
-  color: red !important;
+  color: #ADD8E6 !important;
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-  color: red !important;
+  color: #ADD8E6 !important;
   text-decoration: underline;
 }
-
 .site-main {
   padding: 28px 0 48px;
 }
