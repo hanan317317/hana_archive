@@ -217,3 +217,14 @@ a:focus {
     flex-direction: column;
   }
 }
+
+.site-nav a,
+.site-nav a:visited {
+  color: #ADD8E6 !important;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #ADD8E6 !important;
+  text-decoration: underline;
+}
