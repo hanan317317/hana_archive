@@ -151,6 +151,7 @@ a:focus {
 .page-title {
   margin: 0 0 8px;
   font-size: 2rem;
+  color: #437080;
 }
 
 .meta {
@@ -177,6 +178,7 @@ a:focus {
   margin-top: 28px;
   margin-bottom: 12px;
   font-size: 1.3rem;
+  color: #437080;
 }
 
 .gallery-grid {
