@@ -16,5 +16,4 @@ permalink: /about/
   - scans of research papers and notes
   - photos connected to each location
 
-  You can rewrite this page however you want.
 </div>
