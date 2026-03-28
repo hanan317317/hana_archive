@@ -8,7 +8,7 @@
   --line: #d9d9d2;
   --text: #1f1f1f;
   --muted: #666;
-  --link: #ADD8E6;
+  --link: #7da8b7;
   --max: 1100px;
 }
 
@@ -70,13 +70,13 @@ a:focus {
 
 .site-nav a,
 .site-nav a:visited {
-  color: #ADD8E6 !important;
+  color: #7da8b7 !important;
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-  color: #ADD8E6 !important;
+  color: #7da8b7 !important;
   text-decoration: underline;
 }
 
