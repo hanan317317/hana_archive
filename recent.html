@@ -13,7 +13,7 @@ permalink: /recent/
       {% assign location_page = site.locations | where: "slug", post.location | first %}
       <li>
         <a href="{{ post.url | relative_url }}">
-          {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+          {{ post.date | date: "%Y-%m" }} {{ post.title }}
         </a>
         {% if location_page %}
           <small> in <a href="{{ location_page.url | relative_url }}">{{ location_page.title }}</a></small>

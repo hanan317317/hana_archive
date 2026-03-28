@@ -22,7 +22,7 @@ layout: default
     {% for post in location_posts %}
       <li>
         <a href="{{ post.url | relative_url }}">
-          {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+          {{ post.date | date: "%Y-%m" }} {{ post.title }}
         </a>
       </li>
     {% else %}

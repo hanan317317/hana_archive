@@ -4,6 +4,7 @@ slug: bali
 lat: -8.4095
 lng: 115.1889
 short_description: Archive entries from Bali visits.
+layout: location
 ---
 
 This is the Bali location page.
