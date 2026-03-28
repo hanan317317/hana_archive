@@ -8,7 +8,7 @@
   --line: #d9d9d2;
   --text: #1f1f1f;
   --muted: #666;
-  --link: #ADD8E6;
+  --link: red;
   --max: 1100px;
 }
 
@@ -22,18 +22,17 @@ body {
 
 a,
 a:visited,
-.site-nav a,
 .entry-list a,
 .file-list a,
 .back-link,
 .location-list a {
-  color: #ADD8E6 !important;
+  color: red !important;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #ADD8E6 !important;
+  color: red !important;
   text-decoration: underline;
 }
 
@@ -68,6 +67,18 @@ a:focus {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.site-nav a,
+.site-nav a:visited {
+  color: red !important;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: red !important;
+  text-decoration: underline;
 }
 
 .site-main {
@@ -216,15 +227,4 @@ a:focus {
     align-items: flex-start;
     flex-direction: column;
   }
-}
-
-.site-nav a,
-.site-nav a:visited {
-  color: #ADD8E6 !important;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #ADD8E6 !important;
-  text-decoration: underline;
 }
