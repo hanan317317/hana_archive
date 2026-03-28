@@ -20,19 +20,18 @@ body {
   line-height: 1.6;
 }
 
-a,
-a:visited,
-.entry-list a,
-.file-list a,
-.back-link,
-.location-list a {
-  color: red !important;
+a {
+  color: var(--link);
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--link);
 }
 
 a:hover,
 a:focus {
-  color: red !important;
+  color: var(--link);
   text-decoration: underline;
 }
 
